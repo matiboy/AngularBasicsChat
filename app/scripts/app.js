@@ -11,25 +11,8 @@ angular.module('ChatFrontendApp', ['ngRoute', 'btford.socket-io'])
         templateUrl: 'views/chat.html',
         controller: 'ChatCtrl as chat',
         resolve: {
-          socket: function(socket, $q, $timeout) {
-            var q = $q.defer();
-            // Listen to response
-            socket.on('registered', function(data) {
-              q.resolve({
-                success: true,
-                id: data
-              });
-            });
-            // Send out registration
-            socket.emit('register', 'hello');
-            // Promises are only resolved once, so this will only happen if we didn't recieve the connected event within 5s
-            $timeout( function() {
-              q.resolve({
-                success: false,
-                message: 'Time out'
-              });
-            },  5000);
-            return q.promise;
+          register: function(Chatsocket, Userservice) {
+            return Chatsocket.register(Userservice.username);
           }
         }
       })
