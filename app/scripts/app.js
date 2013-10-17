@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ChatFrontendApp', ['ngRoute', 'btford.socket-io'])
+angular.module('ChatFrontendApp', ['ngRoute', 'btford.socket-io', 'ChatFrontendApp.services'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -22,6 +22,8 @@ angular.module('ChatFrontendApp', ['ngRoute', 'btford.socket-io'])
   }).config(function(socketProvider){
     var socket = io.connect('http://192.168.1.137:5555');
     socketProvider.ioSocket(socket);
+  }).config(function(ChatserviceProvider){
+    ChatserviceProvider.setDateFormat('h:mm:ss a');
   }).run(function(socket){
     console.log(socket);
   });

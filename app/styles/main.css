@@ -21,6 +21,10 @@ body {
     letter-spacing: -1px;
 }
 
+.user {
+    margin-bottom: 20px;
+}
+
 .bubble {
     position: relative;
     display: inline-block;
