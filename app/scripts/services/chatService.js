@@ -24,7 +24,6 @@ angular.module('ChatFrontendApp.services', [])
       }
 
       $rootScope.$on(ChatsocketReceiveEvents.MESSAGE_RECEIVED, function(e, from, message) {
-        console.log(from, message);
         receivedMessage(from, message);
       });
 

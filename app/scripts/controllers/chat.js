@@ -28,8 +28,8 @@ angular.module('ChatFrontendApp')
     }
 
     this.send = function() {
-      console.log(this.msg);
-      Chatservice.sendMessage(this.msg);
+
+      Chatservice.sendMessage(self.msg);
       this.msg = '';
-    }
+    };
   });
