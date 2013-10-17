@@ -9,7 +9,7 @@
 </div>
 <div class="col-md-8">
   <div class="row">
-    <input ng-model="chat.msg"><span class="btn btn-primary" ng-click="chat.send()">Send</span>
+    <input press-enter="chat.send" ng-model="chat.msg"><span class="btn btn-primary" ng-click="chat.send()">Send</span>
   </div>
   <div class="row bubble" ng-repeat="message in chat.messages" ng-class="{mine: message.isMine}">
     <p class="date" ng-bind="message.when"></p>
