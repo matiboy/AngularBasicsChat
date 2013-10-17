@@ -20,7 +20,7 @@ angular.module('ChatFrontendApp', ['ngRoute', 'btford.socket-io', 'ChatFrontendA
         redirectTo: '/'
       });
   }).config(function(socketProvider){
-    var socket = io.connect('http://192.168.1.137:5555');
+    var socket = io.connect('http://localhost:5555');
     socketProvider.ioSocket(socket);
   }).config(function(ChatserviceProvider){
     ChatserviceProvider.setDateFormat('h:mm:ss a');

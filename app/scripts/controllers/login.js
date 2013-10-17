@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('ChatFrontendApp')
-  .controller('LoginCtrl', function ($location, Userservice) {
-    this.username = '';
-    this.register = function() {
+  .controller('LoginCtrl', function ($scope, $location, Userservice) {
+    $scope.username = '';
+    $scope.register = function() {
       // Set the username
-      Userservice.username = this.username;
+      Userservice.username = $scope.username;
       // Redirect
       $location.path('/chat');
     }

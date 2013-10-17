@@ -27,9 +27,8 @@ angular.module('ChatFrontendApp')
       self.messages = Chatservice.messages;
     }
 
-    this.send = function() {
-
-      Chatservice.sendMessage(self.msg);
-      this.msg = '';
+    $scope.send = function() {
+      Chatservice.sendMessage($scope.msg);
+      $scope.msg = '';
     };
   });
