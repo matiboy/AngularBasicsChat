@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ChatFrontendApp', ['ngRoute', 'btford.socket-io', 'ChatFrontendApp.services'])
+angular.module('ChatFrontendApp', ['ngRoute', 'btford.socket-io', 'ChatFrontendApp.services', 'ngAnimate'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

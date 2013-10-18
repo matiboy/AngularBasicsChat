@@ -24,7 +24,7 @@ angular.module('ChatFrontendApp')
     $scope.activate = function() {
       console.log(this); // this will be the scope
       Chatservice.activate(this.user);
-      self.messages = Chatservice.messages;
+      $scope.messages = Chatservice.messages;
     }
 
     $scope.send = function() {

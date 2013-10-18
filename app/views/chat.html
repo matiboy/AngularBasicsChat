@@ -11,7 +11,7 @@
   <div class="row">
     <input press-enter="send" ng-model="msg"><span class="btn btn-primary" ng-click="send()">Send</span>
   </div>
-  <div class="row bubble" ng-repeat="message in chat.messages" ng-class="{mine: message.isMine}">
+  <div class="repeat-item bubble" ng-repeat="message in messages">
     <p class="date" ng-bind="message.when"></p>
     <p ng-bind="message.message"></p>
   </div>
