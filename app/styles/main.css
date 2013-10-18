@@ -38,6 +38,10 @@ body {
     text-decoration: underline;
 }
 
+.user {
+    margin-bottom: 20px;
+}
+
 .bubble.mine {
     background: #d7e4ed;
 }

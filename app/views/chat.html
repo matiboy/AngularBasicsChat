@@ -1,5 +1,5 @@
 <div class="col-md-4">
-  <div ng-repeat="user in chat.users" ng-click="activate()" class="row" ng-class="{'text-success': user.active}">
+  <div ng-repeat="user in chat.users" ng-click="activate()" class="row user" ng-class="{'text-success': user.active}">
     <div class="col-md-4">
       <img ng-src="http://api.qrserver.com/v1/create-qr-code/?data={{user.name}}&size=60x60">
     </div>
