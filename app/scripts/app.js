@@ -20,8 +20,8 @@ angular.module('ChatFrontendApp', ['ngRoute', 'btford.socket-io'])
         redirectTo: '/'
       });
   }).config(function(socketProvider){
-    var socket = io.connect('http://192.168.43.171:5555');
+    var socket = io.connect('http://192.168.1.132:5555');
     socketProvider.ioSocket(socket);
   }).run(function(socket){
-    console.log(socket);
+    // console.log(socket);
   });
