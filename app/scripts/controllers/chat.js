@@ -2,6 +2,7 @@
 
 angular.module('ChatFrontendApp')
   .controller('ChatCtrl', function ($scope, $route) {
+    this.title = $route.current.someParameter;
     // Received the resolved value of the promise defined in the route
     var resolved = $route.current.locals.socket;
     if(resolved.success) {
